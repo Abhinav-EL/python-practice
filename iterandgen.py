@@ -1,6 +1,4 @@
-def iterateMeOutside(itrObj):
-        for i in itrObj:
-            print("Value: ", i)
+import testmodule
 
 class TestIterAndGen:
     def __init__(self):
@@ -30,4 +28,12 @@ class TestComp:
 
 x = TestComp()
 newFruits = x.getFruitsWithoutApple()
-iterateMeOutside(newFruits)
+
+# Module methods use --
+testmodule.iterateOverMe(newFruits)
+# Iterate over dummy list of dictionary
+testmodule.iterateOverPersonList()
+
+#Iterate using a Generator
+for gen in testmodule.generatorTemp():
+    print(gen)
