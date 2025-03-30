@@ -16,7 +16,7 @@ jsondf = pd.read_json("PandaJsonSample.json")
 
 print("Colories Collumn Of 5th Row: ", jsondf.loc[5]['Calories'])
 
-### Bad Data
+### Bad Data Excersices 
 # Calories is missing row 0 & 3rd is NaN
 jsondf2 = pd.read_json("PandaJsonSampleBadData.json").dropna()
 print("Colories Collumn Of 5th Row: ", jsondf2)
@@ -24,3 +24,10 @@ print("Colories Collumn Of 5th Row: ", jsondf2)
 # Row 1 & 2 are duplicates
 jsondf3 = pd.read_json("PandaJsonSampleBadData.json").dropna().drop_duplicates()
 print("Drop one of the duplicates: ", jsondf3)
+
+# Dates are wrong
+df = pd.read_json("PandaJsonSampleBadDate.json")
+df2 = df[df['Dates']!="0000/12/19"]
+print("DF2: ", df2)
+df2['Dates'] = pd.to_datetime(df2['Dates'])
+print("Dates: ", df2)
