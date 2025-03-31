@@ -28,6 +28,6 @@ print("Drop one of the duplicates: ", jsondf3)
 # Dates are wrong
 df = pd.read_json("PandaJsonSampleBadDate.json")
 df2 = df[df['Dates']!="0000/12/19"]
-print("DF2: ", df2)
+print("DF2: ", df2['Dates'].loc[0])
 df2['Dates'] = pd.to_datetime(df2['Dates'])
-print("Dates: ", df2)
+print("Dates: ", df2.to_string())
