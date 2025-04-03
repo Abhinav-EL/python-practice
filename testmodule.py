@@ -27,3 +27,7 @@ def iterateOverPersonList():
 def generatorTemp():
     for person in personList:
         yield person
+
+
+def generatorTemp2():
+    return (person for person in personList)

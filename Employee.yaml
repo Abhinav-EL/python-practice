@@ -1,0 +1,4 @@
+- name: Apple
+  price: 1.0
+- name: Banana
+  price: 0.5
