@@ -1,4 +1,4 @@
-import testmodule
+import testGenerators
 
 class TestIterAndGen:
     def __init__(self):
@@ -38,14 +38,14 @@ x = TestComp()
 newFruits = x.getFruitsWithoutApple()
 
 # Module methods use --
-testmodule.iterateOverMe(newFruits)
+testGenerators.iterateOverMe(newFruits)
 # Iterate over dummy list of dictionary
-testmodule.iterateOverPersonList()
+testGenerators.iterateOverPersonList()
 
 #Iterate using a Generator
-for person in testmodule.generatorTemp():
+for person in testGenerators.generatorTemp():
     print("From Gen1: ", person)
 
 # Iterate using a Generator Expression
-for person in testmodule.generatorTemp2():
+for person in testGenerators.generatorTemp2():
     print("From Gen2: ",person)
